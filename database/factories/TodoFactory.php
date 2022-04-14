@@ -7,17 +7,17 @@ use App\Models\Todo;
 
 class TodoFactory extends Factory
 {
+    protected $model = Todo::class;
     /**
      * Define the model's default state.
      *
      * @return array
      */
-    protected $model = Todo::class;
     public function definition()
     {
         return [
-            'name' =>  $faker->sentence(3),
-            'description' =>  $faker->paragraph(3),
+            'name' =>  $this->faker->sentence(3),
+            'description' =>  $this->faker->paragraph(4),
             'completed' =>  false
         ];
     }
