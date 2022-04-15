@@ -24,3 +24,4 @@ Route::post('store-todo', 'App\Http\Controllers\TodosController@store')->name('s
 Route::get('todos/{todo}/edit', 'App\Http\Controllers\TodosController@edit')->name('edit_todo');
 Route::post('/update-todo/{todo}', 'App\Http\Controllers\TodosController@update')->name('update_todo');
 Route::get('/delete-todo/{todo}', 'App\Http\Controllers\TodosController@delete')->name('delete_todo');
+Route::get('/complete-todo/{todo}', 'App\Http\Controllers\TodosController@complete')->name('complete_todo');

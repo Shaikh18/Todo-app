@@ -15,7 +15,10 @@
                             <li class="list-group-item">
                                 {{ $todo->name }}
 
-                                <a href="{{ route('todo', $todo->id)}}" class="btn btn-outline-primary btn-sm float-end">View</a>
+                                <a href="{{ route('todo', $todo->id)}}" class="btn btn-outline-primary btn-sm float-end">View </a>
+                                @if(!$todo->completed)
+                                    <a href="{{ route('complete_todo', $todo->id)}}" class="btn btn-outline-success btn-sm float-end ">Completed</a>
+                                @endif
                             </li>
                         @endforeach
                     </ul>
